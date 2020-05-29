@@ -6,8 +6,7 @@ from django.contrib.auth.models import User
 from api_test.models import Project, ProjectConfig, ApiGroupLevelFirst, ApiInfo, \
     APIRequestHistory, ApiOperationHistory, ProjectDynamic, ProjectMember, \
     AutomationTask, UserProfile, ApiHead, ApiParameter, ApiResponse, \
-    ApiParameterRaw, AutomationReportSendConfig, \
-    VisitorsRecord
+    ApiParameterRaw
 
 from django.contrib import admin
 from django.utils.text import capfirst
@@ -278,24 +277,3 @@ class ProjectDynamicForm(ReadOnlyModelAdmin):
 
 
 admin.site.register(ProjectDynamic, ProjectDynamicForm)
-
-
-class AutomationReportSendConfigForm(ReadOnlyModelAdmin):
-    list_display = ('id', 'project', 'reportFrom', 'mailUser', 'mailPass', 'mailSmtp')
-    list_display_links = ('id', 'project', 'reportFrom', 'mailUser', 'mailPass', 'mailSmtp')
-    list_per_page = 20
-    ordering = ('-id',)
-
-
-admin.site.register(AutomationReportSendConfig, AutomationReportSendConfigForm)
-
-
-class VisitorsRecordForm(ReadAndDeleteModelAdmin):
-    search_fields = ('province', 'city', 'district')
-    list_display = ('id', 'formattedAddress', "country", "province", "city", "district", 'callTime')
-    list_display_links = ('id', 'formattedAddress', "country", "province", "city", "district", 'callTime')
-    list_per_page = 20
-    ordering = ('-id',)
-
-
-admin.site.register(VisitorsRecord, VisitorsRecordForm)

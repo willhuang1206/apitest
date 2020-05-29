@@ -62,10 +62,10 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item label="值" prop='value'>
-                    <el-input type="textarea" :rows="5" v-model.trim="editForm.data.value"></el-input>
+                    <el-input type="textarea" :rows="5" v-model="editForm.data.value"></el-input>
                 </el-form-item>
                 <el-form-item label="描述" prop='description'>
-                    <el-input type="textarea" :rows="5" v-model.trim="editForm.data.description"></el-input>
+                    <el-input type="textarea" :rows="5" v-model="editForm.data.description"></el-input>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">

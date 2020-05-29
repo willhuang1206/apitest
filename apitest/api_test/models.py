@@ -255,25 +255,6 @@ class GlobalConfig(models.Model):
         verbose_name = '配置'
         verbose_name_plural = '配置'
 
-class CustomMethod(models.Model):
-    """
-    自定义方法
-    """
-    id = models.AutoField(primary_key=True)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE, verbose_name='项目')
-    name = models.CharField(max_length=50, verbose_name='方法名')
-    description = models.CharField(max_length=1024, blank=True, null=True, verbose_name='描述')
-    type = models.CharField(max_length=50, verbose_name='类型')
-    dataCode = models.TextField(verbose_name='代码')
-    status = models.BooleanField(default=True, verbose_name='状态')
-
-    def __unicode__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = '自定义方法'
-        verbose_name_plural = '自定义方法'
-
 class Group(models.Model):
     """
     分组
@@ -645,46 +626,3 @@ class PublishConfig(models.Model):
     class Meta:
         verbose_name = '发布项目配置'
         verbose_name_plural = '发布项目配置管理'
-
-class AutomationReportSendConfig(models.Model):
-    """
-    报告发送人配置
-    """
-    id = models.AutoField(primary_key=True)
-    project = models.OneToOneField(Project, on_delete=models.CASCADE, verbose_name="项目")
-    reportFrom = models.EmailField(max_length=1024, blank=True, null=True, verbose_name="发送人邮箱")
-    mailUser = models.CharField(max_length=1024, blank=True, null=True, verbose_name="用户名")
-    mailPass = models.CharField(max_length=1024, blank=True, null=True, verbose_name="口令")
-    mailSmtp = models.CharField(max_length=1024, blank=True, null=True, verbose_name="邮箱服务器")
-
-    def __unicode__(self):
-        return self.reportFrom
-
-    class Meta:
-        verbose_name = "邮件发送配置"
-        verbose_name_plural = "邮件发送配置"
-
-
-class VisitorsRecord(models.Model):
-    """
-    访客记录
-    """
-    id = models.AutoField(primary_key=True)
-    formattedAddress = models.CharField(max_length=1024, blank=True, null=True, verbose_name="访客地址")
-    country = models.CharField(max_length=50, blank=True, null=True, verbose_name="国家")
-    province = models.CharField(max_length=50, blank=True, null=True, verbose_name="省份")
-    city = models.CharField(max_length=50, blank=True, null=True, verbose_name="城市")
-    district = models.CharField(max_length=50, blank=True, null=True, verbose_name="县级")
-    township = models.CharField(max_length=50, blank=True, null=True, verbose_name="镇")
-    street = models.CharField(max_length=50, blank=True, null=True, verbose_name="街道")
-    number = models.CharField(max_length=50, blank=True, null=True, verbose_name="门牌号")
-    success = models.CharField(max_length=50, blank=True, null=True, verbose_name="成功")
-    reason = models.CharField(max_length=1024, blank=True, null=True, verbose_name="原因")
-    callTime = models.DateTimeField(auto_now_add=True, verbose_name="访问时间")
-
-    def __unicode__(self):
-        return self.formattedAddress
-
-    class Meta:
-        verbose_name = "访客"
-        verbose_name_plural = "访客查看"

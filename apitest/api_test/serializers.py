@@ -7,7 +7,7 @@ from django.db.models import Q
 from api_test.common.dateUtil import DateUtil
 from api_test.models import Project, ProjectDynamic, ProjectMember, ProjectConfig, GlobalConfig,Group,ApiGroupLevelFirst, \
     ApiInfo, APIRequestHistory, ApiOperationHistory, Automation,AutomationStep,AutomationTask, \
-    AutomationResult,ApiHead, ApiParameter, ApiResponse, ApiParameterRaw, AutomationReportSendConfig,\
+    AutomationResult,ApiHead, ApiParameter, ApiResponse, ApiParameterRaw,\
     UserProfile,Automation2Step,AutomationList2Automation,PublishConfig,ApiAutomationCoverage
 
 
@@ -574,23 +574,3 @@ class PublishConfigDeserializer(serializers.ModelSerializer):
     class Meta:
         model = PublishConfig
         fields = ('id', 'project_id','automations','env', 'name', 'params', 'status', 'sendEmail','emails')
-
-class AutomationReportSendConfigSerializer(serializers.ModelSerializer):
-    """
-    发送人配置序列
-    """
-    project = serializers.CharField(source='project.name')
-
-    class Meta:
-        model = AutomationReportSendConfig
-        fields = ("id", "project", 'reportFrom', 'mailUser', 'mailPass', 'mailSmtp')
-
-
-class AutomationReportSendConfigDeserializer(serializers.ModelSerializer):
-    """
-    发送人配置反序列
-    """
-
-    class Meta:
-        model = AutomationReportSendConfig
-        fields = ("id", "project_id", 'reportFrom', 'mailUser', 'mailPass', 'mailSmtp')

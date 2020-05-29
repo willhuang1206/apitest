@@ -140,12 +140,12 @@
                 </el-row>
                 <el-row :gutter="10">
                     <el-form-item label="参数" prop='params'>
-                        <el-input type="textarea" :rows="2" v-model.trim="automationForm.params"></el-input>
+                        <el-input type="textarea" :rows="2" v-model="automationForm.params"></el-input>
                     </el-form-item>
                 </el-row>
                 <el-row :gutter="10">
                     <el-form-item label="描述" prop='description'>
-                        <el-input :disabled="pageType!=='update'" type="textarea" :rows="2" v-model.trim="automationForm.description"></el-input>
+                        <el-input :disabled="pageType!=='update'" type="textarea" :rows="2" v-model="automationForm.description"></el-input>
                     </el-form-item>
                 </el-row>
             </div>
@@ -221,10 +221,10 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item label="参数" prop='params'>
-                    <el-input type="textarea" :rows="3" v-model.trim="editForm.params"></el-input>
+                    <el-input type="textarea" :rows="3" v-model="editForm.params"></el-input>
                 </el-form-item>
                 <el-form-item label="描述" prop='description'>
-                    <el-input type="textarea" :rows="4" v-model.trim="editForm.description"></el-input>
+                    <el-input type="textarea" :rows="4" v-model="editForm.description"></el-input>
                 </el-form-item>
                 <el-form-item label="操作" prop='steps'><el-button size="mini" title="添加" class="el-icon-plus" @click="addCommand(0)"></el-button>
                     <!--<el-input type="textarea" :rows="4" v-model.trim="editForm.steps"></el-input>-->

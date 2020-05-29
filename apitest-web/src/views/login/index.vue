@@ -28,7 +28,7 @@
             return {
                 loading: false,
                 loginForm: {
-                  username: 'admin',
+                  username: 'test',
                   password: '123456'
                 },
                 loginRules: {

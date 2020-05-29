@@ -624,7 +624,7 @@ class CommonCommand():
     @staticmethod
     def runSql(command):
         """
-        {"desc":"执行sql","alias":"执行sql","valueDesc":{"host":"数据库host","port":"3306","database":"数据库","username":"用户名","password":"密码","sql":"sql语句"},"pattern":"使用用户名(?P<username>.*)和密码(?P<password>.*),连接数据库(?P<host>.*):(?P<port>.*)名称为(?P<database>.*),执行(?P<sql>.*)"}
+        {"desc":"执行sql","alias":"执行sql","valueDesc":{"host":"数据库host","port":"3306","database":"数据库","username":"用户名","password":"密码","sql":"sql语句"},"pattern":"使用用户名(?P<username>.*)和密码(?P<password>.*)连接数据库(?P<host>.*):(?P<port>.*)名称为(?P<database>.*)执行(?P<sql>.*)"}
         """
 
         try:
@@ -705,7 +705,7 @@ class CommonCommand():
     @staticmethod
     def runSSH(command):
         """
-        {"desc":"执行ssh语句","alias":"执行ssh","valueDesc":{"host":"服务器host","port":"22","username":"用户名","password":"密码","command":"执行的ssh语句"},"pattern":"使用用户名(?P<username>.*)和密码(?P<password>.*),连接服务器(?P<host>.*):(?P<port>.*),执行(?P<command>.*)"}
+        {"desc":"执行ssh语句","alias":"执行ssh","valueDesc":{"host":"服务器host","port":"22","username":"用户名","password":"密码","command":"执行的ssh语句"},"pattern":"使用用户名(?P<username>.*)和密码(?P<password>.*)连接服务器(?P<host>.*):(?P<port>.*)执行(?P<command>.*)"}
         """
 
         try:

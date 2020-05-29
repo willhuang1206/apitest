@@ -293,16 +293,17 @@ class RunService():
             if len(steps)==0:
                 description=step.description
                 lines=description.split('\n')
-                for index in range(len(lines)):
-                    line=lines[index]
-                    linePre="%s、" % str(index+1)
-                    lineStartIndex=line.find(linePre)
-                    if lineStartIndex<0:
-                        continue
-                    line=line[lineStartIndex+len(linePre):]
-                    command=CommandService.get_command(line,automation.project.id)
-                    if command:
-                        steps.append({"type":command["type"],"name":command["name"],"actionId":command["actionId"],"params":command["value"],"description":command["desc"],"disable":"False"})
+                lineNo=0
+                for line in lines:
+                    if not line.startswith("#"):
+                        lineNo+=1
+                        linePre="%s、" % str(lineNo)
+                        lineStartIndex=line.find(linePre)
+                        if lineStartIndex>=0:
+                            line=line[lineStartIndex+len(linePre):]
+                        command=CommandService.get_command(line,automation.project.id)
+                        if command:
+                            steps.append({"type":command["type"],"name":command["name"],"actionId":command["actionId"],"params":command["value"],"description":command["desc"],"disable":"False"})
             automationParams=ParamUtil.replaceMap(json.loads(automation.params),context["value"])
             stepParams=json.loads(ParamUtil.replaceParam(step.params,context["envMap"]))
             stepParams=ParamUtil.replaceMap(stepParams,automationParams)

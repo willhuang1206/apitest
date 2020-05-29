@@ -46,7 +46,7 @@ class CommandService:
     @staticmethod
     def get_command(line,projectId=None):
         api_pattern="执行接口(?P<name>.*),使用参数(?P<params>.*)"
-        match=re.search(api_pattern,line)
+        match=re.match(api_pattern,line)
         try:
             if match:
                 api_name=match.group("name")
@@ -59,15 +59,17 @@ class CommandService:
                     api_command={"name":api_name,"type":"api","actionId":0,"alias":"","value":api_params,"desc":""}
                 return api_command
             command_list=[]
+            command_list.extend(CommandService.get_commands(ControlCommand,"control"))
             command_list.extend(CommandService.get_commands(CommonCommand,"common"))
             for command in command_list:
-                match=re.search(command["pattern"],line)
-                if match:
-                    valueMap=json.loads(command["value"])
-                    for key in valueMap:
-                        valueMap[key]=match.group(key)
-                    command["value"]=json.dumps(valueMap)
-                    return command
+                if "pattern" in command:
+                    match=re.match(command["pattern"],line)
+                    if match:
+                        valueMap=json.loads(command["value"])
+                        for key in valueMap:
+                            valueMap[key]=match.group(key)
+                        command["value"]=json.dumps(valueMap)
+                        return command
         except Exception as e:
             # logging.error(traceback.format_exc())
             raise e

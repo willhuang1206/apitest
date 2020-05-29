@@ -43,10 +43,10 @@
                     <!--</el-select>-->
                 </el-form-item>
                 <el-form-item label="参数" prop='params'>
-                    <el-input type="textarea" :rows="4" v-model.trim="editForm.params"></el-input>
+                    <el-input type="textarea" :rows="4" v-model="editForm.params"></el-input>
                 </el-form-item>
                 <el-form-item label="描述" prop='description'>
-                    <el-input type="textarea" :rows="4" v-model.trim="editForm.description"></el-input>
+                    <el-input type="textarea" :rows="4" v-model="editForm.description"></el-input>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
@@ -228,7 +228,7 @@
                         { min: 1, max: 1024, message: '长度在 1 到 1024 个字符', trigger: 'blur' }
                     ],
                     group: [
-                        { type: 'number', required: true, message: '请选择分组', trigger: 'blur'}
+                        { required: true, message: '请选择分组', trigger: 'blur'}
                     ],
                     description: [
                         { required: false, message: '请输入描述', trigger: 'blur' },
@@ -600,7 +600,7 @@
                             let param = {
                                 project_id: Number(this.$route.params.project_id),
                                 type: this.editForm.type,
-                                group_id: this.editForm.group,
+                                group_id: Number(this.editForm.group),
                                 name: self.editForm.name,
                                 params: self.editForm.params,
                                 description: self.editForm.description };

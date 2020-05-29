@@ -2,8 +2,8 @@ import axios from 'axios';
 import router from 'vue-router'
 import Cookies from 'js-cookie'
 import {MessageBox} from 'element-ui';
-export const test = 'http://127.0.0.1:8092';
-//export const test = 'http://apitest.xyz.com';
+//export const test = 'http://127.0.0.1:8092';
+export const test = 'http://apitest.xyz.com';
 
 export const requestLogout = params => { return axios.get(`${test}/api/user/logout`, params).then(res => res.data); };
 // 获取全局配置列表

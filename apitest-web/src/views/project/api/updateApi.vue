@@ -65,7 +65,7 @@
                 <el-row :gutter="10">
                     <el-col :span="18">
                         <el-form-item label="接口描述:" label-width="83px">
-                            <el-input v-model.trim="form.description" type="textarea" :rows="3" placeholder="接口描述"></el-input>
+                            <el-input v-model="form.description" type="textarea" :rows="3" placeholder="接口描述"></el-input>
                         </el-form-item>
                     </el-col>
                 </el-row>
