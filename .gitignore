@@ -1,2 +1,3 @@
 all.log
-dist/
+nohup.out
+apitest-web/dist/
