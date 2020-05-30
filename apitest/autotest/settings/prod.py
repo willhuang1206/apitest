@@ -25,8 +25,8 @@ DATABASES = {
     }
 }
 
-REPORT_URL = 'http://apitest.xyz.com/#/report'
-AUTO_URL = 'http://127.0.0.1:8092'
+REPORT_URL = 'http://106.53.246.180/#/report'
+AUTO_URL = 'http://106.53.246.180:8092'
 PUBLISH_TEST_URL= 'http://ops.jyblife.com:8000/api-token-auth/change_autotest'
 PUBLISH_LIST_URL= 'http://ops.jyblife.com:8000/api-token-auth/publish_list'
 
@@ -38,8 +38,8 @@ DEBUG = False
 SSO_LOGIN=True
 SSO_CLIENTID="apitest"
 SSO_CLIENTSECRET="4587feb504e6e92758a3801335e8a5d5"
-SSO_REDIRECTURL="http://apitest.xyz.com"
-SSO_NOTIFYURL="http://apitest.xyz.com/ssologin"
+SSO_REDIRECTURL="http://106.53.246.180:8092"
+SSO_NOTIFYURL="http://106.53.246.180:8092/ssologin"
 
 SSO_GETTICKETURL="http://u.sit.jyblife.com/system/getTicket"
 SSO_VALIDATEURL="http://u.sit.jyblife.com/out"
