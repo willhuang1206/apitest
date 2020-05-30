@@ -11,7 +11,7 @@ import { test } from '@/api/api'
 
 export function login(data) {
   return request({
-    url: 'http://${test}/api/user/login',
+    url: test + '/api/user/login',
     method: 'post',
     data
   })
