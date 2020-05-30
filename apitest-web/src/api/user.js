@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-//  import { test } from '@/api/api'
+import { test } from '@/api/api'
 
 //export function login(data) {
 //  return request({
@@ -11,7 +11,7 @@ import request from '@/utils/request'
 
 export function login(data) {
   return request({
-    url: 'http://localhost:8092/api/user/login',
+    url: 'http://${test}/api/user/login',
     method: 'post',
     data
   })

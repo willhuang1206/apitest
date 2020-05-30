@@ -19,7 +19,7 @@ DATABASES = {
         'ENGINE':'django.db.backends.mysql',     # 数据库类型，mysql
         'NAME':'apitest',            #  database名
         'USER':'apitest',               # 登录用户
-        'PASSWORD':'123456',        #  登录用户名
+        'PASSWORD':'Jyb123',        #  登录用户名
         'HOST':'127.0.0.1',        # 数据库地址
         'PORT':'3306'              # 数据库端口
     }
