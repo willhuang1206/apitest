@@ -5,7 +5,7 @@
             <el-input v-model.trim="filters.name" style="width: 200px;" placeholder="名称" @keyup.enter.native="handleSearch"></el-input>
             <el-button type="primary" icon="el-icon-search" @click="handleSearch">查询</el-button>
             <el-button type="primary" icon="el-icon-edit" @click="handleAdd">新增</el-button>
-            <el-button type="primary" @click="handleLink">关联</el-button>
+            <!--<el-button type="primary" @click="handleLink">关联</el-button>-->
         </div>
         <!--列表-->
         <el-table :data="userlist" stripe border highlight-current-row v-loading="listLoading" @selection-change="selsChange" style="width: 100%;">

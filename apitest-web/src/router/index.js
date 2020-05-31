@@ -177,6 +177,7 @@ export const constantRoutes = [
         path: '/publish/project=:project_id',
         component: () => import('@/views/project/auto/publishList'),
         name: '发布项目',
+        projectHidden: true,
         leaf: true,
         props: true,
         meta: { title: '发布项目', noCache: true}
@@ -265,6 +266,7 @@ export const constantRoutes = [
   {
     path: '/documentation',
     component: Layout,
+    hidden: true,
     projectHidden: true,
     children: [
       {
@@ -285,7 +287,7 @@ export const asyncRoutes = [
   {
     path: '/other',
     component: Layout,
-    hidden: false,
+    hidden: true,
     //redirect: '/nested/menu1/menu1-1',
     name: 'other',
     meta: {

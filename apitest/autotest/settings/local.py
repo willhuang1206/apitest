@@ -27,8 +27,8 @@ DATABASES = {
 
 REPORT_URL = 'http://127.0.0.1:9527/#/report'
 AUTO_URL = 'http://127.0.0.1:8092'
-PUBLISH_TEST_URL= 'http://ops.jyblife.com:8000/api-token-auth/change_autotest'
-PUBLISH_LIST_URL= 'http://ops.jyblife.com:8000/api-token-auth/publish_list'
+PUBLISH_TEST_URL= ''
+PUBLISH_LIST_URL= ''
 
 SCHEDULE_START=True
 
@@ -41,10 +41,10 @@ SSO_CLIENTSECRET="4587feb504e6e92758a3801335e8a5d5"
 SSO_REDIRECTURL="http://127.0.0.1:8092"
 SSO_NOTIFYURL="http://127.0.0.1:8092/ssologin"
 
-SSO_GETTICKETURL="http://u.sit.jyblife.com/system/getTicket"
-SSO_VALIDATEURL="http://u.sit.jyblife.com/out"
-SSO_LOGINURL="http://u.sit.jyblife.com/site/setLoginState"
-SSO_LOGOUTURL="http://u.sit.jyblife.com/site/setLogOutState"
+SSO_GETTICKETURL="http://xyz.com/system/getTicket"
+SSO_VALIDATEURL="http://xyz.com/out"
+SSO_LOGINURL="http://xyz.com/site/setLoginState"
+SSO_LOGOUTURL="http://xyz.com/site/setLogOutState"
 
 DEV_API_DB="mongodb://172.16.1.118:27019/"
 DEV_API_DB_NAME="dip"
