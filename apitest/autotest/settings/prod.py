@@ -45,8 +45,3 @@ SSO_GETTICKETURL="http://xyz.com/system/getTicket"
 SSO_VALIDATEURL="http://xyz.com/out"
 SSO_LOGINURL="http://xyz.com/site/setLoginState"
 SSO_LOGOUTURL="http://xyz.com/site/setLogOutState"
-
-DEV_API_DB="mongodb://172.16.1.118:27019/"
-DEV_API_DB_NAME="dip"
-DEV_API_DB_USER="dipTest"
-DEV_API_DB_PASS="dipTest123456"
