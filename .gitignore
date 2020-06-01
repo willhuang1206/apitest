@@ -1,4 +1,4 @@
 all.log
 nohup.out
-apitest-web/dist/
 apitest-web/node_modules/
+apitest-web/dist/

@@ -35,7 +35,7 @@ SCHEDULE_START=True
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-SSO_LOGIN=True
+SSO_LOGIN=False
 SSO_CLIENTID="apitest"
 SSO_CLIENTSECRET="4587feb504e6e92758a3801335e8a5d5"
 SSO_REDIRECTURL="http://106.53.246.180:8092"
