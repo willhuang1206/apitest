@@ -39,6 +39,7 @@ SCHEDULE_START=True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+ALLOWED_HOSTS=[]
 
 SSO_LOGIN=False
 SSO_CLIENTID="apitest"
