@@ -25,9 +25,6 @@
           <a target="_blank" href="https://github.com/willhuang1206/apitest">
             <el-dropdown-item>Github</el-dropdown-item>
           </a>
-          <a target="_blank" href="https://github.com/willhuang1206/apitest/wiki">
-            <el-dropdown-item>文档</el-dropdown-item>
-          </a>
           <el-dropdown-item divided @click.native="logout">
             <span style="display:block;">退出</span>
           </el-dropdown-item>

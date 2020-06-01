@@ -134,7 +134,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'autotest.urls'
+ROOT_URLCONF = 'apitest.urls'
 
 TEMPLATES = [
     {
@@ -153,7 +153,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'autotest.wsgi.application'
+WSGI_APPLICATION = 'apitest.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

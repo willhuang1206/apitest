@@ -11,7 +11,7 @@ rootPath = os.path.split(curPath)[0]
 PathProject = os.path.split(rootPath)[0]
 sys.path.append(rootPath)
 sys.path.append(PathProject)
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "autotest.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "apitest.settings")
 django.setup()
 
 from crontab import CronTab

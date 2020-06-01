@@ -25,7 +25,7 @@ DATABASES = {
     }
 }
 
-REPORT_URL = 'http://127.0.0.1:9527/#/report'
+REPORT_URL = 'http://127.0.0.1/#/report'
 AUTO_URL = 'http://127.0.0.1:8092'
 PUBLISH_TEST_URL= ''
 PUBLISH_LIST_URL= ''
