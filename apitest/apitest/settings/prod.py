@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 from .base import *
 
+SERVER_HOST="106.53.246.180"
+SERVER_PORT="8092"
+
 DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
@@ -25,23 +28,21 @@ DATABASES = {
     }
 }
 
-REPORT_URL = 'http://106.53.246.180/#/report'
-AUTO_URL = 'http://106.53.246.180:8092'
-PUBLISH_TEST_URL= ''
-PUBLISH_LIST_URL= ''
+REPORT_URL = 'http://%s/#/report' % SERVER_HOST
+AUTO_URL = 'http://%s:%s' % (SERVER_HOST,SERVER_PORT)
 
 SCHEDULE_START=True
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 SSO_LOGIN=False
 SSO_CLIENTID="apitest"
-SSO_CLIENTSECRET="4587feb504e6e92758a3801335e8a5d5"
-SSO_REDIRECTURL="http://106.53.246.180:8092"
-SSO_NOTIFYURL="http://106.53.246.180:8092/ssologin"
+SSO_CLIENTSECRET=""
+SSO_REDIRECTURL=AUTO_URL
+SSO_NOTIFYURL="%s/ssologin" % AUTO_URL
 
-SSO_GETTICKETURL="http://xyz.com/system/getTicket"
-SSO_VALIDATEURL="http://xyz.com/out"
-SSO_LOGINURL="http://xyz.com/site/setLoginState"
-SSO_LOGOUTURL="http://xyz.com/site/setLogOutState"
+SSO_GETTICKETURL=""
+SSO_VALIDATEURL=""
+SSO_LOGINURL=""
+SSO_LOGOUTURL=""
