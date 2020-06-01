@@ -71,7 +71,7 @@ LOGGING = {
 #                  '192.168.88.108', '192.168.1.10', 'api_test.60community.com', '*']
 
 #AUTH_PROFILE_MODULE = 'djangoadmin.api_test.UserProfile'
-
+ALLOWED_HOSTS=['127.0.0.1','*']
 
 # Application definition
 
